@@ -18,10 +18,22 @@ class App extends Component() {
     const clickCheck = this.state.idArray;
 
     if (clickCheck.includes(id)){
-      this.setState({  });
+      this.setState({clickCheck:[], score:0, goal:12, topScore, message: "You already clicked that!  Gameover!  Click to try again!" });
+      return;
     }
+    
     else{
       clickCheck.push(id);
+
+      if(clickCheck.length === 12){
+        this.setState({clickCheck:[], score:12, message: "Great Memory!  You win!"})
+        return;
+      }
+
+
+
+
+
     }
   }
  
