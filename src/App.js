@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import matches from "./match.json";
+import matches from "./matches.json";
+import Wrapper from "./components/wrapper";
+import Card from "./components/card";
 
-class App extends Component() {
+
+class App extends Component {
 
   state = {
     matches,
@@ -18,7 +21,8 @@ class App extends Component() {
     const clickCheck = this.state.idArray;
 
     if (clickCheck.includes(id)){
-      this.setState({clickCheck:[], score:0, goal:12, topScore, message: "You already clicked that!  Gameover!  Click to try again!" });
+      this.setState({clickCheck:[], score:0, goal:12, message: "You already clicked that!  Gameover!  Click to try again!" });
+      //setState TOPSCORE
       return;
     }
     
@@ -37,8 +41,19 @@ class App extends Component() {
     }
   }
  
-
+  render() {
   return (
+
+    <Wrapper>
+       {this.state.matches.map(match => (
+      <Card
+        id={match.id}
+        key={match.id}
+        image={match.image}
+        alt={match.alt}
+      />
+       ))}
+    </Wrapper>
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
@@ -56,7 +71,7 @@ class App extends Component() {
     //   </header>
     // </div>
   );
-}
+}}
 // random order
 // https://www.w3schools.com/js/js_array_sort.asp
 
