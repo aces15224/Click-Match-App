@@ -4,6 +4,7 @@ import './App.css';
 import matches from "./matches.json";
 import Wrapper from "./components/wrapper";
 import Card from "./components/card";
+import Title from "./components/title";
 
 
 class App extends Component {
@@ -11,14 +12,15 @@ class App extends Component {
   state = {
     matches,
     idArray:[],
-    score:0,
-    topScore:0,
-    goal:12,
-    message:""
+    // score:0,
+    // topScore:0,
+    // goal:12,
+    // message:""
   }
 
   answerShift = id =>{
     const clickCheck = this.state.idArray;
+    console.log(clickCheck)
 
     if (clickCheck.includes(id)){
       this.setState({clickCheck:[], score:0, goal:12, message: "You already clicked that!  Gameover!  Click to try again!" });
@@ -28,6 +30,9 @@ class App extends Component {
     
     else{
       clickCheck.push(id);
+      matches.sort(function(a, b){return 0.5 - Math.random()});
+
+
 
       if(clickCheck.length === 12){
         this.setState({clickCheck:[], score:12, message: "Great Memory!  You win!"})
@@ -37,6 +42,8 @@ class App extends Component {
 
 
 
+      this.setState({score: this.state.score +1, goal:12, message: "You already clicked that!  Gameover!  Click to try again!" });
+
 
     }
   }
@@ -45,31 +52,18 @@ class App extends Component {
   return (
 
     <Wrapper>
+      <Title/>
        {this.state.matches.map(match => (
       <Card
         id={match.id}
         key={match.id}
         image={match.image}
         alt={match.alt}
+        answerShift={this.answerShift}
+
       />
        ))}
     </Wrapper>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }}
 // random order
