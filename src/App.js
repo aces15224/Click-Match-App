@@ -12,10 +12,10 @@ class App extends Component {
   state = {
     matches,
     idArray:[],
-    // score:0,
+    score:0,
     // topScore:0,
     // goal:12,
-    // message:""
+    message:"Yeah!"
   }
 
   answerShift = id =>{
@@ -52,7 +52,10 @@ class App extends Component {
   return (
 
     <Wrapper>
-      <Title/>
+      <Title
+      score={this.state.score}
+      message={this.state.message}
+      />
        {this.state.matches.map(match => (
       <Card
         id={match.id}
