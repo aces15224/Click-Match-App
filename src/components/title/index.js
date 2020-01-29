@@ -7,10 +7,6 @@ function Title(props) {
                 <h1 id="title">Click Game</h1>
                 <h3 className="score">Your Score {props.score}</h3>
                 <h3 className="message"> {props.message}</h3>
-
-
-
-                {/* <h3 score={props.score}>1</h3> */}
             </div>
         </div>;
   }

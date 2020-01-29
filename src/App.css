@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.row, .container{
+  width:1000px;
+     
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+
+}
+
+.cardImage{
+  width: 200px;
+  margin: 10px;
+}
