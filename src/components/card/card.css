@@ -1,5 +1,9 @@
 .card{
-    width:200pxx;
+    width:210px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px #999;
+    overflow: hidden;
 }
 
 /* img{

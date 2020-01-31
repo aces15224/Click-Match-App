@@ -37,17 +37,25 @@
   }
 }
 
-.row, .container{
-  width:1000px;
-     
+ .container{
+  position:relative;
+  top:100px;
+  width:850px;
+  float:left;
   display:flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  box-shadow: 0 3px 6px #999;
 
 
 }
 
 .cardImage{
-  width: 200px;
-  margin: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 5px;
+}
+
+body{
+  /* background-image: url("./brain.jpg"); */
 }

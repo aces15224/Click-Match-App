@@ -1,7 +1,14 @@
-.row1{
-    width:100%;
-}
+
 #title{
-    width:100%;
     /* background-color:black; */
+    float:right;
+    min-height:300px;
+    height: 100%;
+    width: 450px;
+    box-shadow: 0 3px 6px #999;
+    margin: 5px;
+    text-align: center;
 }
+/* Title{
+    float:Right;
+} */
