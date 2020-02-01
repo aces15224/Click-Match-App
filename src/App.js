@@ -14,9 +14,10 @@
 //     idArray:[],
 //     score:0,
 //     // topScore:0,
-//     goal:12,
+// 
+// topScore,
 //     message:"Yeah!"
-//   }
+  // }
 
 //   answerShift = id =>{
 //     const clickCheck = this.state.idArray;
@@ -82,6 +83,8 @@ import Title from "./components/title";
 import filler from "./brainFiller.png"
 
 class App extends Component {
+  
+  
   // state information
 
   constructor(props){
@@ -90,7 +93,7 @@ class App extends Component {
       matches,
       idArray:[],
       score:0,
-      goal:12,
+      topScore:0,
       message:"Test your memory!  Click on each image, but don't click on any more than once!",
       loading:false
       }
@@ -99,8 +102,12 @@ class App extends Component {
     // onclick function
 
   answerShift = id =>{
+    var topScore = this.state.topScore;
+    const score = this.state.score;
     const clickCheck = this.state.idArray;
     this.setState({loading:true})
+          matches.sort(function(a, b){return 0.5 - Math.random()});
+
 
     // image segue controls 
 
@@ -110,25 +117,28 @@ class App extends Component {
 
     // image sorting and scoring logic
 
-    if (clickCheck.includes(id)){
-      this.setState({loading:false, clickCheck:[], score:0, message: "You already clicked that!  Game over! Try Again!" })
-      setTimeout(function(){
-        window.location.reload()
-        }, 2500);
-      
+    if (clickCheck.includes(id)){ 
+      // matches.sort(function(a, b){return 0.5 - Math.random()});
+     
+      if(score > topScore){
+        this.setState({topScore:score})
+      }
+        this.setState({idArray:[], message: "You already clicked that!  Game over! Try Again!" })
+        this.setState({score:0,})           
     }
     
-    else{
+    else {
       clickCheck.push(id);
-      
-      if(this.state.score === 11){
-        this.setState({clickCheck:[], score:12, message: "Great Memory!  You win!"})
+           
+      if(score === 11){
+        this.setState({clickCheck:[], score: 12, topScore: score, message: "Great Memory!  You win!"})
         return;
       }
-
-      matches.sort(function(a, b){return 0.5 - Math.random()});
-     
-      this.setState({ score: this.state.score +1, message: "" });     
+      if(score < topScore){
+        this.setState({score: score+1,  message: ""})
+        return;
+      }     
+      this.setState({ score: score +1, topScore: score +1, message: "" });     
     }
   }
  
@@ -138,10 +148,10 @@ class App extends Component {
     <Wrapper>
       <Title
       score={this.state.score}
+      topScore={this.state.topScore}
       message={this.state.message}
       />
       <div className="container">
-        
           {this.state.loading === true ? 
             this.state.matches.map(match => (
             <Card
