@@ -2,6 +2,7 @@
   "name": "click-match",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aces15224.github.io/Click-Match-App",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -51,6 +52,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/aces15224/Click-Match-App/issues"
-  },
-  "homepage": "https://github.com/aces15224/Click-Match-App"
+  }
 }
