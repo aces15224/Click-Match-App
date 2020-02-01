@@ -1,14 +1,30 @@
 
 #title{
-    /* background-color:black; */
+    position:relative;
+    top: 100px;
     float:right;
     min-height:300px;
     height: 100%;
-    width: 450px;
+    width: 430px;
     box-shadow: 0 3px 6px #999;
-    margin: 5px;
+    margin: 5px 45px;
     text-align: center;
+    background-color:white;
+   
 }
-/* Title{
-    float:Right;
-} */
+
+#name{
+    font-family: 'Bungee Shade', cursive;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    font-size: 45px;
+    color:yellow;
+}
+
+#titleBox{
+    border:10px solid black;
+    min-height: 450px;
+}

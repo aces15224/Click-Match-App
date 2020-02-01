@@ -37,25 +37,16 @@
   }
 }
 
- .container{
-  position:relative;
-  top:100px;
-  width:850px;
-  float:left;
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  box-shadow: 0 3px 6px #999;
-
-
-}
-
-.cardImage{
-  width: 195px;
-  height: 150px;
-  margin: 5px;
+html{
+  width:1382px;
 }
 
 body{
-  /* background-image: url("./brain.jpg"); */
+  background-color:#57A0D3;
+  background-image: url("https://miro.medium.com/max/1200/0*bM_FEUiQPJKHOJY2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+  overflow-x:hidden;
 }

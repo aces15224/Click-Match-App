@@ -1,11 +1,29 @@
 .card{
-    width:210px;
+    width:185px;
+    height: 143px;
     background: #fff;
     border-radius: 2px;
-    box-shadow: 0 3px 6px #999;
+    box-shadow: 0 1px 3px 6px rgb(24, 24, 24);
     overflow: hidden;
 }
 
-/* img{
-    width:100px;
-} */
+
+.container{
+    position:relative;
+    top: 95px;
+    margin-left:10px;
+    width:850px;
+    float:left;
+    display:flex;
+    flex-flow: row wrap;    
+  }
+  
+  .cardImage{
+    margin: 5px;
+    width: 178px;
+    height: 130px;
+  }
+  
+  .img-container{
+    margin:10px;
+  }
