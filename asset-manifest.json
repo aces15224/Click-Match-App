@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aces15224/Click-Match-App/static/css/main.41de356e.chunk.css",
+    "main.js": "/aces15224/Click-Match-App/static/js/main.02047c2e.chunk.js",
+    "main.js.map": "/aces15224/Click-Match-App/static/js/main.02047c2e.chunk.js.map",
+    "runtime-main.js": "/aces15224/Click-Match-App/static/js/runtime-main.f033e118.js",
+    "runtime-main.js.map": "/aces15224/Click-Match-App/static/js/runtime-main.f033e118.js.map",
+    "static/js/2.7d43d0a9.chunk.js": "/aces15224/Click-Match-App/static/js/2.7d43d0a9.chunk.js",
+    "static/js/2.7d43d0a9.chunk.js.map": "/aces15224/Click-Match-App/static/js/2.7d43d0a9.chunk.js.map",
+    "index.html": "/aces15224/Click-Match-App/index.html",
+    "precache-manifest.bb2b4a109612813aac1ec07f87e595b0.js": "/aces15224/Click-Match-App/precache-manifest.bb2b4a109612813aac1ec07f87e595b0.js",
+    "service-worker.js": "/aces15224/Click-Match-App/service-worker.js",
+    "static/css/main.41de356e.chunk.css.map": "/aces15224/Click-Match-App/static/css/main.41de356e.chunk.css.map",
+    "static/js/2.7d43d0a9.chunk.js.LICENSE": "/aces15224/Click-Match-App/static/js/2.7d43d0a9.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f033e118.js",
+    "static/js/2.7d43d0a9.chunk.js",
+    "static/css/main.41de356e.chunk.css",
+    "static/js/main.02047c2e.chunk.js"
+  ]
+}
